@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #f4f5f2;
+  --color-paper: #ffffff;
+  --color-ink: #18201d;
+  --color-muted: #65706b;
+  --color-line: #d9ddda;
+  --color-accent: #146b54;
+  --color-accent-soft: #e5f3ed;
+  --color-warm: #a64b2a;
+  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f4f5f2;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
+.header-icon {
+  display: inline-flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  color: #65706b;
+  transition: color 150ms ease, background-color 150ms ease;
+}
+
+.header-icon:hover {
+  color: #18201d;
+  background: #f1f3f1;
+}
+
+.preview-scroll {
+  min-height: calc(100vh - 160px);
+}
+
+.preview-scale {
+  zoom: 0.46;
+}
+
+.document-prose > :first-child {
+  margin-top: 0;
+}
+
+.document-prose > :last-child {
+  margin-bottom: 0;
+}
+
+.document-prose p,
+.document-prose ul,
+.document-prose ol,
+.document-prose blockquote,
+.document-prose table {
+  margin: 0.65rem 0;
+}
+
+.document-prose h1,
+.document-prose h2,
+.document-prose h3 {
+  margin: 1rem 0 0.45rem;
+  line-height: 1.25;
+}
+
+.document-prose h1 { font-size: 1.65rem; }
+.document-prose h2 { font-size: 1.35rem; }
+.document-prose h3 { font-size: 1.1rem; }
+.document-prose ul,
+.document-prose ol { padding-left: 1.4rem; }
+.document-prose ul { list-style: disc; }
+.document-prose ol { list-style: decimal; }
+.document-prose blockquote { border-left: 3px solid #146b54; padding-left: 1rem; color: #65706b; }
+.document-prose code { background: #eef1ef; padding: 0.1rem 0.25rem; font-family: var(--font-mono); font-size: 0.9em; }
+.document-prose table { width: 100%; border-collapse: collapse; }
+.document-prose th,
+.document-prose td { border: 1px solid #d9ddda; padding: 0.4rem 0.55rem; text-align: left; }
+.document-prose th { background: #f4f6f4; }
+
+@media (min-width: 640px) {
+  .preview-scale { zoom: 0.62; }
+}
+
+@media (min-width: 1024px) {
+  .preview-scale { zoom: 0.68; }
+}
+
+@media (min-width: 1440px) {
+  .preview-scale { zoom: 0.78; }
+}
+
+@media print {
+  body { background: white; }
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #146b54;
+  outline-offset: 2px;
+}
