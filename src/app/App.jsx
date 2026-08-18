@@ -26,7 +26,7 @@ import {
 } from "../utils/files";
 
 export default function App() {
-  const pdfIconUrl = `${import.meta.env.BASE_URL}pdf-icon.png`;
+  const pdfIconUrl = `${import.meta.env.BASE_URL}folioforge-icon.png`;
   const project = useProjectStore((state) => state.project);
   const assets = useProjectStore((state) => state.assets);
   const isHydrated = useProjectStore((state) => state.isHydrated);
