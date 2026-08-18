@@ -1,4 +1,9 @@
-export default function IconButton({ label, children, className = "", ...props }) {
+export default function IconButton({
+  label,
+  children,
+  className = "",
+  ...props
+}) {
   return (
     <button
       type="button"
