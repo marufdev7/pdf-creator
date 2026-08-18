@@ -164,7 +164,7 @@ export default function App() {
     <div className="min-h-screen bg-canvas text-ink">
       <header className="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur">
         <div className="mx-auto flex min-h-16 max-w-[1800px] items-center gap-3 px-4 sm:px-6">
-          <div className="mr-2 flex shrink-0 items-center gap-2"><span className="flex h-8 w-8 items-center justify-center bg-accent text-sm font-black text-white">F</span><span className="hidden text-sm font-bold sm:block">FolioForge</span></div>
+          <div className="mr-2 flex shrink-0 items-center gap-2"><img src="/pdf-icon.png" alt="" aria-hidden="true" className="h-8 w-8 object-contain" /><span className="hidden text-sm font-bold sm:block">FolioForge</span></div>
           <input value={project.name} onChange={(event) => setProjectName(event.target.value)} aria-label="Project name" className="min-w-0 flex-1 border-0 bg-transparent px-2 py-2 text-sm font-semibold text-ink outline-none sm:max-w-md" />
           <span className={`hidden text-xs sm:block ${saveError ? "text-[#a33a2c]" : "text-muted"}`}>{saveLabel}</span>
           <div className="flex items-center gap-1 border-l border-line pl-2">
